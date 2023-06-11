@@ -13,7 +13,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 num-bigint = "0.4.3"
-ethabi = "17"
+ethabi = "18"
 hex-literal = "0.4.1"
 prost = "0.11"
 substreams = "0.5"
