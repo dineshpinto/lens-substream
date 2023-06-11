@@ -12,7 +12,15 @@ data streams with low-cost caching and archiving of blockchain data, high throug
 handling.
 
 This project builds a (basic) Substream in Rust to monitor on-chain Lens protocol data and provide a low-latency data
-streaming interface. Potential uses of such a tool could be to for real-time analysis and monitoring of Lens data.
+streaming interface. Potential uses of such a tool could be for real-time analysis and monitoring of Lens data. Since
+Substreams are streamed, the data can be directly injected into a variety of databases (BigQuery, Clickhouse,
+Kafka etc.), opening up a lot of distinct analytics use cases.
+
+A few unrelated citations:
+
+1. [Gizmodo: Here Are 30 of the Hundreds of Subreddits Going Dark to Protest Reddit's API Changes](https://gizmodo.com/reddit-subreddit-api-r-gaming-1850510180)
+2. [Verge: Twitter just closed the book on academic research](https://www.theverge.com/2023/5/31/23739084/twitter-elon-musk-api-policy-chilling-academic-research)
+3. [9to5Google: Reddit’s API changes kill Android’s best third-party apps, including RIF and Sync](https://9to5google.com/2023/06/08/reddit-android-third-party-apps/)
 
 ## Installation
 
