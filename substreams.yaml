@@ -25,7 +25,7 @@ modules:
 
   - name: store_transfers
     kind: store
-    initialBlock: 12287507
+    initialBlock: 43764445
     updatePolicy: add
     valueType: int64
     inputs:
@@ -33,7 +33,7 @@ modules:
 
   - name: map_approvals
     kind: map
-    initialBlock: 12287507
+    initialBlock: 43764445
     inputs:
       - source: sf.ethereum.type.v2.Block
     output:

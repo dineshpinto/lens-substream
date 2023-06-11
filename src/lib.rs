@@ -75,7 +75,7 @@ fn map_approvals(blk: eth::Block) -> Result<lpp::Approvals, substreams::errors::
 fn store_approvals(approvals: lpp::Approvals, s: StoreAddInt64) {
     for approval in approvals.approvals {
         log::info!("Found approval {}", Hex(&approval.trx_hash));
-        s.add(approval.ordinal, generate_key(&approval.owner), -1);
+        s.add(approval.ordinal, generate_key(&approval.owner), 1);
     }
 }
 
