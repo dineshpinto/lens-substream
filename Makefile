@@ -21,3 +21,7 @@ package: build
 .PHONY: clean
 clean:
 	cargo clean
+
+.PHONY: gui
+gui: build
+	substreams gui -e $(ENDPOINT) substreams.yaml map_transfers -s $(START_BLOCK) -t $(STOP_BLOCK)
