@@ -14,6 +14,18 @@ message Transfer {
   uint64 ordinal = 5;
 }
 
+message Approvals {
+  repeated Approval approvals = 1;
+}
+
+message Approval {
+  bytes owner = 1;
+  bytes approved = 2;
+  uint64 token_id = 3;
+  bytes trx_hash = 4;
+  uint64 ordinal = 5;
+}
+
 message Collects {
   repeated Collect collects = 1;
 }

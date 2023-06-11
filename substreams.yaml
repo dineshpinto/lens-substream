@@ -30,3 +30,19 @@ modules:
     valueType: int64
     inputs:
       - map: map_transfers
+
+  - name: map_approvals
+    kind: map
+    initialBlock: 12287507
+    inputs:
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:eth.erc721.v1.Approvals
+
+  - name: store_approvals
+    kind: store
+    initialBlock: 12287507
+    updatePolicy: add
+    valueType: int64
+    inputs:
+      - map: map_approvals
