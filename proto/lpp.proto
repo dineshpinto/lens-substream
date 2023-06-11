@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package eth.lpp.v1;
+
+message Transfers {
+  repeated Transfer transfers = 1;
+}
+
+message Transfer {
+  bytes from = 1;
+  bytes to = 2;
+  uint64 token_id = 3;
+  bytes trx_hash = 4;
+  uint64 ordinal = 5;
+}
+
+message Collects {
+  repeated Collect collects = 1;
+}
+
+message Collect {
+  uint64 profileId = 1;
+  uint64 pubId = 2;
+  bytes data = 3;
+}
+
+message Follows {
+  repeated Follow follows = 1;
+}
+
+message Follow {
+  repeated ProfileId profileIds = 1;
+  repeated Data datas = 2;
+}
+
+message ProfileId {
+  uint64 profileId = 1;
+}
+
+message Data {
+  bytes data = 1;
+}

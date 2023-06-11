@@ -1,0 +1,32 @@
+[package]
+name = "lens-substream"
+version = "0.1.0"
+description = "Substream for Lens Protocol"
+edition = "2021"
+authors = ["Dinesh Pinto <annual.fallout_0z@icloud.com>"]
+repository = "https://github.com/dineshpinto/lens-substream"
+license = "Apache 2.0"
+
+[lib]
+name = "substreams"
+crate-type = ["cdylib"]
+
+[dependencies]
+num-bigint = "0.4.3"
+ethabi = "17"
+hex-literal = "0.3.4"
+prost = "0.11"
+substreams = "0.5"
+substreams-ethereum = "0.9.0"
+
+[target.wasm32-unknown-unknown.dependencies]
+getrandom = { version = "0.2", features = ["custom"] }
+
+[build-dependencies]
+anyhow = "1"
+substreams-ethereum = "0.9.0"
+
+[profile.release]
+lto = true
+opt-level = 's'
+strip = "debuginfo"
