@@ -14,7 +14,7 @@ crate-type = ["cdylib"]
 [dependencies]
 num-bigint = "0.4.3"
 ethabi = "17"
-hex-literal = "0.3.4"
+hex-literal = "0.4.1"
 prost = "0.11"
 substreams = "0.5"
 substreams-ethereum = "0.9.0"
